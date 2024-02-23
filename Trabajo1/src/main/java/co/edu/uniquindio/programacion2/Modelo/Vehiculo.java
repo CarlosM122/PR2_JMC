@@ -49,11 +49,9 @@ public class Vehiculo {
 
     @Override
     public String toString() {
-        return "Vehiculo{" +
-                "placa='" + placa + '\'' +
+        return "placa='" + placa + '\'' +
                 ", modelo='" + modelo + '\'' +
                 ", marca='" + marca + '\'' +
-                ", color='" + color + '\'' +
-                '}';
+                ", color='" + color + '\'';
     }
 }

@@ -60,4 +60,13 @@ public class Asociado {
         TamañoVehiculo = tamañoVehiculo;
     }
 
+    @Override
+    public String toString() {
+        return "Asociado con los datos:" +
+                "Nombre='" + Nombre + '\'' +
+                ", NumeroIdentificacion=" + NumeroIdentificacion +
+                ", Email='" + Email + '\'' +
+                ", NumeroCelular=" + NumeroCelular +
+                ", TamañoVehiculo='" + TamañoVehiculo + '\'';
+    }
 }

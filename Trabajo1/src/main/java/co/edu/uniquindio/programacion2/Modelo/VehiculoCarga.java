@@ -19,4 +19,12 @@ public class VehiculoCarga extends Vehiculo{
     public void setNumEjes(long numEjes) {
         NumEjes = numEjes;
     }
+
+    @Override
+    public String toString() {
+        return
+                "Vehiculo de carga con datos:\n" + super.toString() +
+                "CapacidadCarga=" + CapacidadCarga +
+                ", NumEjes=" + NumEjes;
+    }
 }
