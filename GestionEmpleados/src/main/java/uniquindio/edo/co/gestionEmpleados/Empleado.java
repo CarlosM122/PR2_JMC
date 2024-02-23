@@ -1,17 +1,35 @@
 package uniquindio.edo.co.gestionEmpleados;
 
-public class Empleado {
+public class Empleado extends Departamento{
     private String nombre;
     private String idEmpleado;
-    private String dependencia;
+    private String departamento;
+    private int añosTrabajados;
 
     public Empleado() {
     }
 
-    public Empleado(String nombre, String idEmpleado, String dependencia) {
+    public Empleado(String nombre, String idEmpleado, String departamento, int añosTrabajados) {
         this.nombre = nombre;
         this.idEmpleado = idEmpleado;
-        this.dependencia = dependencia;
+        this.departamento = super.getNombre();
+        this.añosTrabajados = añosTrabajados;
+    }
+
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = super.getNombre();
+    }
+
+    public int getAñosTrabajados() {
+        return añosTrabajados;
+    }
+
+    public void setAñosTrabajados(int añosTrabajados) {
+        this.añosTrabajados = añosTrabajados;
     }
 
     public String getNombre() {
@@ -30,11 +48,4 @@ public class Empleado {
         this.idEmpleado = idEmpleado;
     }
 
-    public String getDependencia() {
-        return dependencia;
-    }
-
-    public void setDependencia(String dependencia) {
-        this.dependencia = dependencia;
-    }
 }
