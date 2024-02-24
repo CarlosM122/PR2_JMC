@@ -7,14 +7,24 @@ public class Departamento {
     private String nombre;
     private String codigo;
     private List<Empleado> empleados = new ArrayList<>();
+    private List<Proyecto> proyectos = new ArrayList<>();
 
     public Departamento() {
     }
 
-    public Departamento(String nombre, String codigo, List<Empleado> empleados) {
+    public Departamento(String nombre, String codigo, List<Empleado> empleados, List<Proyecto> proyectos) {
         this.nombre = nombre;
         this.codigo = codigo;
         this.empleados = empleados;
+        this.proyectos = proyectos;
+    }
+
+    public List<Proyecto> getProyectos() {
+        return proyectos;
+    }
+
+    public void setProyectos(List<Proyecto> proyectos) {
+        this.proyectos = proyectos;
     }
 
     public String getNombre() {

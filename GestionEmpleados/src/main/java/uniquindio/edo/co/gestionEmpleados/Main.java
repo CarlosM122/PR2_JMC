@@ -8,6 +8,7 @@ public class Main {
         inicializarDatos(empresa);
         //obtenerDepartamento(empresa);
         //asensoPendiente(empresa);
+        cantidadEmpleadosProyecto(empresa);
     }
 
     private static void inicializarDatos(Empresa empresa) {
@@ -25,6 +26,17 @@ public class Main {
         departamento3.setNombre("Programacion");
         departamento3.setCodigo("KOL");
 
+        Proyecto proyecto = new Proyecto();
+        proyecto.setNombre("Construcción de un Data Lake");
+        proyecto.setCodigo("123");
+
+        Proyecto proyecto1 = new Proyecto();
+        proyecto1.setNombre("Pruebas de usabilidad y accesibilidad");
+        proyecto1.setCodigo("456");
+
+        Proyecto proyecto2 = new Proyecto();
+        proyecto2.setNombre("Desarrollo de nuevas aplicaciones");
+        proyecto2.setCodigo("987");
 
         Empleado empleado1 = new Empleado();
         empleado1.setNombre("Pedro");
@@ -67,6 +79,18 @@ public class Main {
         departamento3.getEmpleados().add(empleado5);
         departamento3.getEmpleados().add(empleado6);
 
+        departamento1.getProyectos().add(proyecto);
+        departamento2.getProyectos().add(proyecto1);
+        departamento3.getProyectos().add(proyecto2);
+
+        proyecto.getEmpleadosAsignados().add(empleado1);
+        proyecto.getEmpleadosAsignados().add(empleado2);
+        proyecto1.getEmpleadosAsignados().add(empleado3);
+        proyecto1.getEmpleadosAsignados().add(empleado4);
+        proyecto2.getEmpleadosAsignados().add(empleado5);
+        proyecto2.getEmpleadosAsignados().add(empleado6);
+
+
         empresa.getDepartamentos().add(departamento1);
         empresa.getDepartamentos().add(departamento2);
         empresa.getDepartamentos().add(departamento3);
@@ -91,6 +115,16 @@ public class Main {
                  else {
                      System.out.println(empleado.getNombre() + " No tiene asenso pendiente");
                  }
+             }
+         }
+     }
+
+     public static void cantidadEmpleadosProyecto(Empresa empresa){
+         for (Departamento departamento : empresa.getDepartamentos()){
+             for (Proyecto proyecto : departamento.getProyectos()) {
+                     int cantidad=proyecto.getEmpleadosAsignados().size();
+                     System.out.println("En el proyecto: "+ proyecto.getNombre()+ ". Hay un total de: "+ cantidad+" empleados.");
+
              }
          }
      }
