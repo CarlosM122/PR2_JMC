@@ -12,7 +12,7 @@ public class Empleado extends Departamento{
     public Empleado(String nombre, String idEmpleado, String departamento, int añosTrabajados) {
         this.nombre = nombre;
         this.idEmpleado = idEmpleado;
-        this.departamento = super.getNombre();
+        this.departamento = departamento;
         this.añosTrabajados = añosTrabajados;
     }
 
@@ -21,7 +21,7 @@ public class Empleado extends Departamento{
     }
 
     public void setDepartamento(String departamento) {
-        this.departamento = super.getNombre();
+        this.departamento = departamento;
     }
 
     public int getAñosTrabajados() {

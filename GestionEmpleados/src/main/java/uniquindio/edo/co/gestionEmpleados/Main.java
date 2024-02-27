@@ -6,9 +6,9 @@ public class Main {
     public static void main(String[] args) {
         Empresa empresa = new Empresa();
         inicializarDatos(empresa);
-        //obtenerDepartamento(empresa);
+        obtenerDepartamento(empresa);
         //asensoPendiente(empresa);
-        cantidadEmpleadosProyecto(empresa);
+        //cantidadEmpleadosProyecto(empresa);
     }
 
     private static void inicializarDatos(Empresa empresa) {
@@ -42,33 +42,37 @@ public class Main {
         empleado1.setNombre("Pedro");
         empleado1.setIdEmpleado("MAN1068");
         empleado1.setAñosTrabajados(12);
+        empleado1.setDepartamento(departamento1.getNombre());
 
         Empleado empleado2 = new Empleado();
         empleado2.setNombre("Mariano");
         empleado2.setIdEmpleado("SOL9856");
         empleado2.setAñosTrabajados(40);
+        empleado2.setDepartamento(departamento1.getNombre());
 
         Empleado empleado3 = new Empleado();
         empleado3.setNombre("Sofia");
         empleado3.setIdEmpleado("FIA1979");
-        empleado3.getDepartamento();
         empleado3.setAñosTrabajados(21);
+        empleado3.setDepartamento(departamento2.getNombre());
 
         Empleado empleado4 = new Empleado();
         empleado4.setNombre("Victoria");
         empleado4.setIdEmpleado("GAS4567");
-        empleado4.getDepartamento();
         empleado4.setAñosTrabajados(12);
+        empleado4.setDepartamento(departamento2.getNombre());
 
         Empleado empleado5 = new Empleado();
         empleado5.setNombre("Saul");
         empleado5.setIdEmpleado("GAS4457");
         empleado5.setAñosTrabajados(30);
+        empleado5.setDepartamento(departamento3.getNombre());
 
         Empleado empleado6 = new Empleado();
         empleado6.setNombre("Merida");
         empleado6.setIdEmpleado("KOI4437");
         empleado6.setAñosTrabajados(11);
+        empleado6.setDepartamento(departamento3.getNombre());
 
 
 
@@ -101,7 +105,7 @@ public class Main {
         for (Departamento departamento : empresa.getDepartamentos()){
             for (Empleado empleado : departamento.getEmpleados()){
                 if (Objects.equals(empleado.getIdEmpleado(), idEmpleado)){
-                    System.out.println("El empleado con id:" + empleado.getIdEmpleado() + "Se encuentra en el departamento:"+ empleado.getDepartamento());
+                    System.out.println("El empleado con id:" + empleado.getIdEmpleado() + " Se encuentra en el departamento: "+ empleado.getDepartamento());
                 }
             }
         }

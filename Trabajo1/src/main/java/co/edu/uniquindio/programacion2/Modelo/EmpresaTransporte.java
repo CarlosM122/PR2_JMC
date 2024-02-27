@@ -2,10 +2,18 @@ package co.edu.uniquindio.programacion2.Modelo;
 import java.util.ArrayList;
 public class EmpresaTransporte {
     private String NombreEmpresa;
-    private ArrayList<Asociado> ListaAsociados;
-    private ArrayList<Vehiculo> ListaVehiculo;
+    private ArrayList<Asociado> ListaAsociados = new ArrayList<>();
+    private ArrayList<Vehiculo> ListaVehiculo = new ArrayList<>();
 
-    
+    public EmpresaTransporte() {
+    }
+
+    public EmpresaTransporte(String nombreEmpresa, ArrayList<Asociado> listaAsociados, ArrayList<Vehiculo> listaVehiculo) {
+        NombreEmpresa = nombreEmpresa;
+        ListaAsociados = listaAsociados;
+        ListaVehiculo = listaVehiculo;
+    }
+
     public String getNombreEmpresa() {
         return NombreEmpresa;
     }
