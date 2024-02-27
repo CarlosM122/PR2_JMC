@@ -1,72 +1,64 @@
 package co.edu.uniquindio.programacion2.Modelo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Asociado {
-    private String Nombre;
-    private int NumeroIdentificacion;
-    private String Email;
-    private int NumeroCelular;
-    private String TamañoVehiculo;
+    private String nombre;
+    private String numIdentificacion;
+    private String email;
+    private String numCelular;
+    private String tamañoVehiculo;
+    private List<Vehiculo> vehiculoList = new ArrayList<>();
 
-    public Asociado(){
-
-    }
-
-    public Asociado(String Nombre, int NumeroIdentificaion, String Email, int NumeroCelular, String TamañoVehiculo){
-        this.Nombre=Nombre;
-        this.NumeroIdentificacion=NumeroIdentificaion;
-        this.Email=Email;
-        this.NumeroCelular=NumeroCelular;
-        this.TamañoVehiculo=TamañoVehiculo;
-
+    public Asociado() {
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     public void setNombre(String nombre) {
-        Nombre = nombre;
+        this.nombre = nombre;
     }
 
-    public int getNumeroIdentificacion() {
-        return NumeroIdentificacion;
+    public String getNumIdentificacion() {
+        return numIdentificacion;
     }
 
-    public void setNumeroIdentificacion(int numeroIdentificacion) {
-        NumeroIdentificacion = numeroIdentificacion;
+    public void setNumIdentificacion(String numIdentificacion) {
+        this.numIdentificacion = numIdentificacion;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public void setEmail(String email) {
-        Email = email;
+        this.email = email;
     }
 
-    public int getNumeroCelular() {
-        return NumeroCelular;
+    public String getNumCelular() {
+        return numCelular;
     }
 
-    public void setNumeroCelular(int numeroCelular) {
-        NumeroCelular = numeroCelular;
+    public void setNumCelular(String numCelular) {
+        this.numCelular = numCelular;
     }
 
     public String getTamañoVehiculo() {
-        return TamañoVehiculo;
+        return tamañoVehiculo;
     }
 
     public void setTamañoVehiculo(String tamañoVehiculo) {
-        TamañoVehiculo = tamañoVehiculo;
+        this.tamañoVehiculo = tamañoVehiculo;
     }
 
-    @Override
-    public String toString() {
-        return "Asociado con los datos:" +
-                "Nombre='" + Nombre + '\'' +
-                ", NumeroIdentificacion=" + NumeroIdentificacion +
-                ", Email='" + Email + '\'' +
-                ", NumeroCelular=" + NumeroCelular +
-                ", TamañoVehiculo='" + TamañoVehiculo + '\'';
+    public List<Vehiculo> getVehiculoList() {
+        return vehiculoList;
+    }
+
+    public void setVehiculoList(List<Vehiculo> vehiculoList) {
+        this.vehiculoList = vehiculoList;
     }
 }
